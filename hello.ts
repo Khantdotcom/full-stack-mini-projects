@@ -1,4 +1,4 @@
-type interfaces{
+type interfaces ={
     name: string,
     age : number
 }
