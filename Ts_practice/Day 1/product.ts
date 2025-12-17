@@ -28,3 +28,11 @@ function isValidProduct(data: any): data is Product {
 const safeProducts = productsArray.filter(data => isValidProduct(data))
 
 //Now We have fixed the problem for incorrect data points passing to our application. 
+
+//A: Interfaces to define the required data structure (Product).
+
+//D: Type Inference (and assertion) to label the parsed data.
+
+//C: Generics in the form of a Type Guard (data is Product) to perform runtime validation.
+
+//Runtime Logic (.filter()) to produce a clean, type-safe array.
