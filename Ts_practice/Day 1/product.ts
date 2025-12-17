@@ -36,3 +36,18 @@ const safeProducts = productsArray.filter(data => isValidProduct(data))
 //C: Generics in the form of a Type Guard (data is Product) to perform runtime validation.
 
 //Runtime Logic (.filter()) to produce a clean, type-safe array.
+
+
+type Car = {
+    model : String;
+    price : Number;
+}
+
+let car = {
+    model : "Tesla",
+    price : 10000
+}
+
+let draft = Partial<Car>
+
+console.log(typeof car)
