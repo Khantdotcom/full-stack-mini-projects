@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Deep Debug API",
+      "program": "${workspaceFolder}/src/index.ts", // Your entry point
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["ts-node"], // Runs TS directly without manual 'dist' mapping
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "envFile": "${workspaceFolder}/.env", // Loads your Prisma/DB URLs
+      "sourceMaps": true,
+      "smartStep": true,
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}
